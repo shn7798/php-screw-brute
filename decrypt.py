@@ -16,14 +16,11 @@ def decrypt_file(key, filepath, bak_suffix='.bak'):
     if not check_encrypted(bytes):
         return
 
-    # remove header
-    bytes = bytes[len(header):]
-
     with open(bakpath, 'wb') as fh:
         fh.write(bytes)
 
     try:
-        assert decipher(bytes, key, filepath)
+        assert decipher(bytes[len(header):], key, filepath)
     except Exception as e:
         print('[E] Error: %s' % filepath)
 
