@@ -25,5 +25,5 @@ $ python ./brute.py test/*.php
 ```
 
 ```
-$ python ./decrypt.py 'ca fe ba be de ad be ef' test/*.php
+$ python ./decrypt.py 'ca fe ba be de ad be ef' test/
 ```
