@@ -15,11 +15,15 @@ required.
 ## Example usage:
 
 ```
-$ ./php-screw-brute.py test/*.php
+$ python ./brute.py test/*.php
 [+] Trying key:     ca fe ba be 0 0 be ef
 [!] Recovered key:  ca fe ba be de ad be ef
 [+] Deciphering files
 [-] test/array.php
 [-] test/example.php
 [-] test/hello.php
+```
+
+```
+$ python ./decrypt.py 'ca fe ba be de ad be ef' test/*.php
 ```
